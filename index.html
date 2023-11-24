@@ -1,33 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Circumference and area of a circle</title>
-     </head>
+
+<head>
+    <title>*GAME ABOUT CLIMBING*</title>
+</head>
+
 <body>
 
 <h1>*GAME ABOUT CLIMBING*</h1>
-  <h3>version 1.0; 19/10/2023</h3>
-<p>The idea is to enhance the game I made few years ago.</p>
-  
-  <h2>CHARACTERS</h2>
-<p>
-  There will be 2 characters with abilities (strength, technique and rope management). They are going to have an inventory. 
-  In that invenotry there would (or would not) be [pitons & hammer], [camalots], [wedges], [carabiners], [climbing guide].
-</p>
 
-  <h2>MAP</h2>
-<p>
-  There will be a <i>Lobby</i> from which you can proceed to the <i>Shop</i> or <i>Climbing areas</i>. 
-  In <i>Shop</i> you can buy [pitons & hammer], [camalots], [wedges], [carabiners], [climbing guide].
-  In <i>Climbing areas</i> there are gonna be many routes with different difficulty, length, ... (maybe there would be different dificulty in between of protection possibilities?)
-</p>
+<h3>version 1.1; 24/11/2023</h3>
+    <p>
+        Main goal is to get to the top of Triglav, slovenian highest peak. There are many routes one can use to ascend to Triglav,
+        but I will focus only on the climbing ones. But there is also a lot of other peaks in Julian Alps a novice can try before Triglav.
+    </p>
+    <h2>CLIMBING AREAS</h2>
+        <p>
+            The routes will be taken from <i>https://www.bergsteigen.com/</i> and adapted for the needs of this project. 
+        </p>
+        <h3><i>climbing_section</i></h3>
+            <p>
+                <i>strength</i> and <i>technique</i> and <i>protection_placing</i> difficulities
+            </p>
+    <h2>CHARACTER ABILITIES</h2>
+        <p>
+            type: bool >>> <i>is_alive</i> :: :: :: whether the character is alive (rather preparation for future)
+        </p>
+        <p>
+            type: integer (probably 1-100); will be used in tests againts difficulities
+        </p>
+        <p>
+            <i>strength</i>, <i>technique</i>, 
+            <i>protection_placing</i> (whether a character is able to place a protection e.g. see a crack, nest, hourglasses... 
+                test against characteristic of a <i>climbing_section</i>)
+            
+            <i>health</i>, <i>tiredness</i> (preparation for future)
+            <i>rope_management</i> (preparation for future; will affect HP loss when fall occurs and stamina loss while climbing multipitch)
+        </p>
+        <p>
+            INVENTORY: climbing guide (there are information about the routes) & other stuff
+        </p>
+
+
+<h3>version 1.0; 19/10/2023</h3>
+    <p>The idea is to enhance the game I made few years ago.</p>
+    <h2>CHARACTERS</h2>
+        <p>
+            There will be 2 characters with abilities (strength, technique and rope management). They are going to have an inventory. 
+            In that invenotry there would (or would not) be [pitons & hammer], [camalots], [wedges], [carabiners], [climbing guide].
+        </p>
+    <h2>MAP</h2>
+        <p>
+            There will be a <i>Lobby</i> from which you can proceed to the <i>Shop</i> or <i>Climbing areas</i>. 
+            In <i>Shop</i> you can buy [pitons & hammer], [camalots], [wedges], [carabiners], [climbing guide].
+            Many routes are going to be in <i>Climbing areas</i> with different difficulty, length, protection possibilities, ... 
+        </p>
 
 <h3>Compute area and circumference of a circle</h3>
-      <p>radius <input id="radius" size=40> m </p>
-      <p><button onClick='compute()'>Compute</button></p>
-      <p><div id="results"></div></p>
-      <script type='text/javascript'>
-         function compute() {
+    <p>radius <input id="radius" size=40> m </p>
+    <p><button onClick='compute()'>Compute</button></p>
+    <p><div id="results"></div></p>
+    <script type='text/javascript'>
+        function compute() {
             var r = document.getElementById('radius').value;
             var area = Math.PI * r * r;
 			var circ = Math.PI * r * 2;
@@ -36,7 +70,7 @@
             document.getElementById("results").innerHTML = str;
 			//document.getElementById("results").innerHTML = str_cr;
          }
-      </script>
+    </script>
 
 </body>
 </html>
