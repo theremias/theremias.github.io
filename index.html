@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Circumference and area of a circle</title>
+     </head>
 <body>
 
 <h1>*GAME ABOUT CLIMBING*</h1>
@@ -18,5 +21,22 @@
   In <i>Shop</i> you can buy [pitons & hammer], [camalots], [wedges], [carabiners], [climbing guide].
   In <i>Climbing areas</i> there are gonna be many routes with different difficulty, length, ... (maybe there would be different dificulty in between of protection possibilities?)
 </p>
+
+<h3>Compute area and circumference of a circle</h3>
+      <p>radius <input id="radius" size=40> m </p>
+      <p><button onClick='compute()'>Compute</button></p>
+      <p><div id="results"></div></p>
+      <script type='text/javascript'>
+         function compute() {
+            var r = document.getElementById('radius').value;
+            var area = Math.PI * r * r;
+			var circ = Math.PI * r * 2;
+            var str = "Area is " + area + " m^2 and circumference " + circ + " m"; 
+			var str_cr = 'Circumference: ' + circ + ' m';
+            document.getElementById("results").innerHTML = str;
+			//document.getElementById("results").innerHTML = str_cr;
+         }
+      </script>
+
 </body>
 </html>
